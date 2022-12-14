@@ -1,14 +1,13 @@
 //Parte um
 import estudantes from "./estudantes.js";
 
+//export default function Curso(nome, notaAprovacao, maximoFaltas, estudantes) {
 export default function Curso(nome, notaAprovacao, maximoFaltas) {
   this.nome = nome;
   this.notaAprovacao = notaAprovacao;
   this.maximoFaltas = maximoFaltas;
   this.estudantes = estudantes;  
   this.addAluno = (aluno) => this.estudantes.push(aluno);
- 
-//Parte dois  
   this.avaliarAluno = (aluno) => {
     if (aluno.qtdeFaltas < this.maximoFaltas && aluno.calcularMedia() >= this.notaAprovacao) {
       return true;
